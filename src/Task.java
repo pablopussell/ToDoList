@@ -1,19 +1,12 @@
 public class Task {
 	
-	private static int _lastID=0;
-	
-	public Task() {
-		_lastID++;
-		id=_lastID;
+	public Task(String taskName) {
+		this.title=taskName;
 	}
 	
 	private String title = "";
 	private boolean isCompleted = false;
-	private int id;	
 	
-	public int getId() {
-		return id;
-	}
 	
 	public String getTitle() {
 		return title;

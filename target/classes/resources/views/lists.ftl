@@ -8,21 +8,21 @@
 <body>
   <div id="views">
     <div id="tasks">
-      <h1>List Management</h1>
-      
-      <form>
-        <input type="text" placeholder="Type the name of the new list">
-      </form>
+      <h1>List Types</h1>
       
       <div class="items"></div>
       
-      <#list lists?keys as key>
         <div class="item">
             <div class="view">
-                <a href="items.html"><span>${lists[key]}</span></a> <a class="destroy"></a>
+                <a href="/items_pending/"><span>${Pending}</span></a> <a class="destroy"></a>
             </div> 
         </div>
-      </#list>
+        <div class="item">
+            <div class="view">
+                <a href="/items_completed/"><span>${Completed}</span></a> <a class="destroy"></a>
+            </div> 
+        </div>
+      
 
     </div>
   </div>

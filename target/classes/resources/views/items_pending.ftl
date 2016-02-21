@@ -9,28 +9,23 @@
     <div id="tasks">
       <h1>My List</h1>
       
-      <form>
-        <input type="text" placeholder="What needs to be done?">
+      <form method="POST" action="/views/">
+        <input type="text" name="taskName" placeholder="What needs to be done?">
       </form>
       
+      <#list Pending as pending>
       <div class="items"></div>
         <div class="item">
             <div class="view">
                 <input type="checkbox">
-                <span>Pending item</span> <a class="destroy"></a>
+                <span>${pending.getTitle()}</span><a class="destroy"></a>
             </div>
         </div>
-        <div class="item done">
-            <div class="view">
-                <input type="checkbox" checked="checked">
-                <span>Completed Item</span> <a class="destroy"></a>
-            </div>
-        </div>
-
+       </#list> 
+        
       <footer>
         <a class="clear">Clear completed</a>
-          <a href="lists.html" class="clear">&lt; Return to list Management </a>
-        <div class="count"><span class="countVal">1</span> left</div>
+          <a href="/" class="clear">&lt; Return to list Management </a>
       </footer>
     </div>
   </div>
