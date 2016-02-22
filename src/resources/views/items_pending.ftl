@@ -3,6 +3,8 @@
 <head>
   <title>Todos</title>
   <link rel="stylesheet" href="../css/application.css" type="text/css" charset="utf-8">
+  <script src="../js/isCompleted.js" />
+  <script src="../js/isDeleted.js" />
 </head>
 <body>
   <div id="views">
@@ -17,7 +19,7 @@
       <div class="items"></div>
         <div class="item">
             <div class="view">
-                <input type="checkbox">
+                <input type="checkbox" onclick="">
                 <span>${pending.getTitle()}</span><a class="destroy"></a>
             </div>
         </div>
