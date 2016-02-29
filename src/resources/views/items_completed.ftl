@@ -13,7 +13,7 @@
       <div class="items"></div>
         <div class="item">
             <div class="view">
-                <input type="checkbox">
+                <input type="checkbox" id="toBeDeleted">
                 <span>${completed.getTitle()}</span><a class="destroy"></a>
             </div>
         </div>
